@@ -1,0 +1,19 @@
+Fonction AfficherPile(ES p : Pile de Info)
+Variables
+    élém : Info
+    p2: Pile de Info
+Début
+    Tant Que non p.vide() Faire
+        élém <- p.valeurSommet()
+        Ecrire élém
+        p2.empiler(élém)
+        p.dépiler()
+    Fin Tant Que
+
+    Tant que non p2.vide() Faire
+        p.empiler(p2.valeurSommet())
+        p2.dépiler()
+    Fin Tant Que
+Fin
+
+AfficherPile(<5 4 3 2 1 0|)

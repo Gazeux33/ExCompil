@@ -1,0 +1,11 @@
+Action afficheTableau (E tab : Tableau [taille] de Entier)
+    Variable(s)
+        élém : Entier
+    Début
+        Pour i de 0 à taille-1 Faire
+            élém <- tab[i]
+            Écrire élém
+        Fin Pour
+    Fin
+
+afficheTableau([4, 3, 2, 1, 0])

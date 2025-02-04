@@ -1,0 +1,46 @@
+Fonction ôter(ES f: File de N, E élém: N)
+Variables
+    ôté: Booléen
+    svg: File de N
+Début
+    ôté <- FAUX
+    Tant Que non f.vide() ET non ôté Faire
+        Si f.valeurPremier() = élém Alors
+            ôté <- VRAI
+        Sinon
+            svg.enfiler(f.valeurPremier())
+        Fin Si
+        f.défiler()
+    Fin Tant Que
+
+    Tant Que non f.vide() Faire
+        svg.enfiler(f.valeurPremier())
+        f.défiler()
+    Fin Tant Que
+
+    Tant Que non svg.vide() Faire
+        f.enfiler(svg.valeurPremier())
+        svg.défiler()
+    Fin Tant Que
+Fin
+
+Fonction lancer()
+Variable
+    f: File de N
+    r: Booléen
+Début
+    f <- > 2 8 4 2 6 4 4 2 2 4 8 6 >
+    Ecrire f // Avant
+    ôter(f, 4)
+    Ecrire f // Après
+
+    r <- f = > 2 8 4 2 6 4 4 2 2 8 6 >
+    Ecrire r // VRAI
+
+    r <- f = > 2 8 4 2 6 4 4 2 2 8 6  1 2  >
+    Ecrire r // FAUX
+
+
+Fin
+
+lancer()

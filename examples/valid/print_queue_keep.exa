@@ -1,0 +1,28 @@
+Fonction afficheFile (ES f : File de Info)
+    Variable(s)
+        élém : Info
+        f2 : File de Info // Forcément initialisé avec une valeur par défaut
+    Début
+        Tant Que non f.vide() Faire
+            élém <- f.valeurPremier()
+            Écrire élém
+            f.défiler()
+            f2.enfiler(élém)
+        Fin Tant Que
+
+        Tant Que non f2.vide() Faire
+            f.enfiler(f2.valeurPremier())
+            f2.défiler()
+        Fin Tant Que
+    Fin
+
+Fonction lanceProgramme()
+    Variable
+        f1 : File de Info
+    Début
+        f1 <- > 4 3 2 1 0>
+        afficheFile(f1)
+        afficheFile(f1)
+    Fin
+
+lanceProgramme()

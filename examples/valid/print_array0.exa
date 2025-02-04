@@ -1,0 +1,12 @@
+Fonction afficheTableau (E tab : Tableau [taille] de Info)
+    Variable(s)
+        élém : Info
+    Début
+        Pour i de 0 à taille-1 Faire
+            élém <- tab[i]
+            Écrire élém
+        Fin Pour
+    Fin
+
+// Lance la fonction en fournissant un tableau
+afficheTableau([4, 3, 2, 1, 0])
